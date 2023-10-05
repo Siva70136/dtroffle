@@ -130,7 +130,7 @@ const Home = (props) => {
     const startIndex = (currentPage - 1) * itemsPerPage;
     const endIndex = startIndex + itemsPerPage;
     let itemsToDisplay = [];
-    if (data.lenth>0){
+    if (data.length>0){
         itemsToDisplay = data.slice(startIndex, endIndex);
     }
 
