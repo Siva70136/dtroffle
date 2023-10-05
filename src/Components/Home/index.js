@@ -17,6 +17,9 @@ const Home = (props) => {
         description: '',
     });
 
+    const itemsPerPage = 3;
+    let totalPages;
+
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -77,6 +80,7 @@ const Home = (props) => {
             d = localStorage.getItem('data');
             //console.log(d)
             setData(JSON.parse(d))
+            totalPages = Math.ceil(data.length / itemsPerPage);
             //console.log(data)
 
         } catch (error) {
@@ -109,11 +113,7 @@ const Home = (props) => {
 
     //=============  Pagination  ================
 
-    const itemsPerPage = 3;
 
-     if (data != []) {
-        const totalPages = Math.ceil(data.length / itemsPerPage);
-    }
 
     const goToPreviousPage = () => {
         if (currentPage > 1) {
