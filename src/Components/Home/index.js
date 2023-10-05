@@ -17,6 +17,9 @@ const Home = (props) => {
         description: '',
     });
 
+    const itemsPerPage = 3;
+    let totalPages;
+
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -76,8 +79,12 @@ const Home = (props) => {
             setData(UpdatedData);
             d = localStorage.getItem('data');
             //console.log(d)
-            setData(JSON.parse(d))
+            if (d != null) {
+                setData(JSON.parse(d))
+            }
+
             //console.log(data)
+            
 
         } catch (error) {
             console.error('An error occurred:', error);
@@ -109,9 +116,7 @@ const Home = (props) => {
 
     //=============  Pagination  ================
 
-    const itemsPerPage = 3;
-
-    const totalPages = Math.ceil(data.length / itemsPerPage);
+    totalPages = Math.ceil(data.length / itemsPerPage);
 
     const goToPreviousPage = () => {
         if (currentPage > 1) {
@@ -126,7 +131,10 @@ const Home = (props) => {
     };
     const startIndex = (currentPage - 1) * itemsPerPage;
     const endIndex = startIndex + itemsPerPage;
-    const itemsToDisplay = data.slice(startIndex, endIndex);
+    let itemsToDisplay = [];
+    if (data.length > 0) {
+        itemsToDisplay = data.slice(startIndex, endIndex);
+    }
 
     //=============== Delete =============
     const del = (id) => {
@@ -223,7 +231,7 @@ const Home = (props) => {
 
                                     <div className="button-container">
                                         <button type="submit" className="button btn" onClick={register}>Submit</button>
-                                        
+
                                     </div>
                                 </form>
                             </div>
@@ -241,22 +249,22 @@ const Home = (props) => {
                                 </Link>
                                 <table className='info'>
                                     <tbody>
-                                    <tr>
-                                        <th>Title:</th>
-                                        <td>{each.title}</td>
-                                    </tr>
-                                    <tr>
-                                        <th>Description:</th>
-                                        <td>{each.description}</td>
-                                    </tr>
-                                    <tr>
-                                        <th>Price:</th>
-                                        <td>${each.price}</td>
-                                    </tr>
-                                    <tr>
-                                        <th>Category:</th>
-                                        <td>{each.category}</td>
-                                    </tr>
+                                        <tr>
+                                            <th>Title:</th>
+                                            <td>{each.title}</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Description:</th>
+                                            <td>{each.description}</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Price:</th>
+                                            <td>${each.price}</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Category:</th>
+                                            <td>{each.category}</td>
+                                        </tr>
                                     </tbody>
                                 </table>
                                 <div className='delete'>
