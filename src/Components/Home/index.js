@@ -111,7 +111,9 @@ const Home = (props) => {
 
     const itemsPerPage = 3;
 
-    const totalPages = Math.ceil(data.length / itemsPerPage);
+     if (data != []) {
+        const totalPages = Math.ceil(data.length / itemsPerPage);
+    }
 
     const goToPreviousPage = () => {
         if (currentPage > 1) {
