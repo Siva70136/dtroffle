@@ -55,6 +55,14 @@ const Home = (props) => {
             //console.log(data[itemIndex])
 
         }
+        setFormData({
+            id: "",
+            title: '',
+            price: '',
+            category: '',
+            description: '',
+          });
+        };
 
     }
 
