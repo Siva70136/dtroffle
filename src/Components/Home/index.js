@@ -62,7 +62,7 @@ const Home = (props) => {
             category: '',
             description: '',
           });
-        };
+    
 
     }
 
@@ -147,11 +147,6 @@ const Home = (props) => {
         const updatedData = data.filter((card) => card.id !== id);
         setData(updatedData);
     }
-
-
-
-
-
 
 
 
