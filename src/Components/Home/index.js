@@ -128,7 +128,10 @@ const Home = (props) => {
     };
     const startIndex = (currentPage - 1) * itemsPerPage;
     const endIndex = startIndex + itemsPerPage;
-    const itemsToDisplay = data.slice(startIndex, endIndex);
+    let itemsToDisplay=[];
+     if(data.length>0){
+        itemsToDisplay = data.slice(startIndex, endIndex);
+    }
 
     //=============== Delete =============
     const del = (id) => {
