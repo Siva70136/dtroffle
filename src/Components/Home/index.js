@@ -82,9 +82,8 @@ const Home = (props) => {
             if (d != null) {
                 setData(JSON.parse(d))
             }
-
             //console.log(data)
-            
+
 
         } catch (error) {
             console.error('An error occurred:', error);
@@ -115,7 +114,6 @@ const Home = (props) => {
 
 
     //=============  Pagination  ================
-
     totalPages = Math.ceil(data.length / itemsPerPage);
 
     const goToPreviousPage = () => {
@@ -132,7 +130,7 @@ const Home = (props) => {
     const startIndex = (currentPage - 1) * itemsPerPage;
     const endIndex = startIndex + itemsPerPage;
     let itemsToDisplay = [];
-    if (data.length > 0) {
+    if (data.lenth>0){
         itemsToDisplay = data.slice(startIndex, endIndex);
     }
 
