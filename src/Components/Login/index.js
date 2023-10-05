@@ -45,7 +45,7 @@ const Login = (props) => {
                     <form id="addUserForm" className="form" autoComplete='off'>
                         <h3 className="textHead">Sign in</h3>
                         <p className='left'>User Id</p>
-                        <input type="text" name="" id="name" value={username} className="form-control input" placeholder="Email OR Phone" onChange={e => setEmail(e.target.value)} required />
+                        <input type="text" name="" id="name" value={username} className="form-control input" placeholder="Enter UserId" onChange={e => setEmail(e.target.value)} required />
 
                         <p className='left'>Password</p>
                         <input type="password" name="" id="PWD" value={password} className="form-control input" placeholder="Password" onChange={e => setPassword(e.target.value)} required />
