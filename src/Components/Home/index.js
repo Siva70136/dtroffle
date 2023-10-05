@@ -36,8 +36,8 @@ const Home = (props) => {
     const register = async (e) => {
         e.preventDefault();
         //console.log(formData);
-        const itemIndex = data.findIndex((item) => item.id == formData.id);
-        console.log(data[30]);
+        const itemIndex = data.findIndex((item) => item.id === formData.id);
+        //console.log(data[30]);
         const newItem = {
             ...formData
         }
