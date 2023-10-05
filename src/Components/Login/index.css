@@ -1,0 +1,195 @@
+.create.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-container {
+    width: 100%;
+    margin-bottom: 10px;
+
+}
+
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    padding: 15px;
+    
+    margin-bottom: -3%;
+}
+
+.butt {
+    border-radius: 8px;
+    cursor: pointer;
+    border-width: 0px;
+    padding: 6px;
+    font-size: 16px;
+    background-color: goldenrod;
+    color: #9B111E;
+    width: 100px;
+    margin-left: 3px;
+}
+.butt-container{
+    align-self: flex-end;
+}
+
+
+
+
+
+
+
+
+/* HOME */
+
+
+.home-container{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+.item {
+    margin-bottom: 3px;
+}
+
+.btn {
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+
+.table-container {
+    max-width: 100%;
+    overflow-x: auto;
+    box-shadow: 0px 4px 16px 0px #bfbfbf;
+    padding: 20px;
+}
+
+
+
+.texthead {
+    font-weight: bold;
+    color: #e91e63;
+    font-size: 24px;
+}
+
+@media screen and (max-width:760px) {
+    table {
+        width: 200%;
+        margin-left: 60px;
+    }
+
+    .texthead {
+        font-size: 16px;
+    }
+
+    th,
+    td {
+        padding: 4px;
+    }
+}
+
+/* signup */
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 7px;
+    width: 300px;
+    box-shadow: 0px 4px 16px 0px #bfbfbf;
+    padding: 20px;
+    /*box-shadow: 1px 0px 3px 0px;*/
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.left{
+    text-align: left;
+    font-weight: 500;
+}
+
+.warning {
+    color: red;
+}
+
+.textHead {
+    font-weight: bold;
+    color: #e91e63;
+    font-size: 28px;
+}
+
+.label-data {
+    font-size: 14px;
+    color: #82818d;
+    font-family: 'Roboto';
+    font-weight: 500;
+    text-align: left;
+}
+
+.input {
+    width: auto;
+    padding: 7px;
+}
+
+.button {
+    background-color: #e91e63;
+    border-width: 0px;
+    border-radius: 18px;
+    width: 100%;
+    padding: 8px;
+    color: white;
+    font-family: 'Roboto';
+    font-weight: 300;
+    cursor: pointer;
+}
+.button-container{
+    margin-top: 8px;
+    display: flex;
+   
+}
+.icons-container {
+    display: flex;
+    margin-left: 10px;
+}
+
+.heading {
+    font-size: 20px;
+    text-align: center;
+}
+
+.icon {
+    color: #878787;
+    margin: auto;
+
+}
+
+.icon:hover {
+    color: #e91e63;
+}
+
+.signup {
+    color: #e91e63;
+    font-weight: 500;
+}
+
+
+.bg-container {
+    background-color: #f1f5f8;
+    height: 100vh;
+}
+
+
+.counter {
+    color: #c20a72;
+}
