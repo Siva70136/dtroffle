@@ -21,8 +21,8 @@ const Login = (props) => {
         }
         try {
             const response = await fetch('https://dummyjson.com/auth/login', options);
-            //const data = await response.json();
-            Cookies.set('jwt_token', response.ok, { expires: 30, path: '/' });
+            const data = await response.json();
+            Cookies.set('jwt_token', data.token, { expires: 30, path: '/' });
             //console.log(response)
             if(response.ok){
                 history.replace('/');
